@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tour Booking</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
+    <STYLE>
+         body {
+            background-size: cover;
+            
+        
+        
+            background-color: rgba(0,0,0,0.5);
+            height:default;
+
+        }
+    </STYLE>
+</head>
+<body class="bg-light" background="https://png.pngtree.com/thumb_back/fh260/background/20190221/ourmid/pngtree-tourism-travel-lighthouse-cloud-image_14516.jpg">
+    <div class="container-fluid bg-dark text-white p-3 mb-3">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-4 col-md-2 text-center mb-2">
+                    <label class="btn btn-outline-light btn-block">
+                        <input type="radio" name="mode" value="train" class="d-none" required>
+                        <a href="https://www.irctc.co.in/nget/train-search">Train</a>
+                    </label>
+                </div>
+                <div class="col-4 col-md-2 text-center mb-2">
+                    <label class="btn btn-outline-light btn-block">
+                        <input type="radio" name="mode" value="flight" class="d-none" required>
+                        <a href="https://www.ixigo.com/flights">flight</a>
+                    </label>
+                </div>
+                <div class="col-4 col-md-2 text-center mb-2">
+                    <label class="btn btn-outline-light btn-block">
+                        <input type="radio" name="mode" value="bus" class="d-none" required>
+                        <a href="https://www.sbsttourist.com/">Bus</a>
+                    </label>
+                </div>
+                <div class="col-12 text-center mb-2">
+                    <label class="btn btn-outline-light">
+                        <input type="checkbox" id="hotelOption" class="d-none">
+                        <a href="https://www.oyorooms.com/">Hotel</a>
+                    </label>
+                </div>
+                <div class="col-4 col-md-2 text-center mb-2">
+                    <label class="btn btn-outline-light btn-block">
+                        <input type="radio" name="mode" value="Booking Details" class="d-none" required>
+                        <a href="https://docs.google.com/forms/d/e/1FAIpQLScHwWYamA44EjZLDFu6J5ZPcmjLv1hieWIxWrBnw9KV_sI4tA/viewform?usp=sf_link">Booking Details</a>
+                    </label>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container py-5">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <h1 class="text-center mb-4"><p class="trns-text" class="text-white"> Welcome to tour booking</p></h1>
+                <form id="bookingForm">
+                    <!-- Source Location (Hidden for Hotel Option) -->
+                    <div class="form-group" id="sourceGroup">
+                        <label for="source">Source Location:</label>
+                        <input type="text" id="source" class="form-control" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="destination">Destination Location:</label>
+                        <input type="text" id="destination" class="form-control" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="date">Date of Journey:</label>
+                        <input type="date" id="date" class="form-control" required>
+                    </div>
+
+                    <div id="hotelFilters" style="display:none;">
+                        <h3>Hotel Filters</h3>
+                        <!-- Add your filter options here -->
+                        <div class="form-group">
+                            <label for="priceRange">Price Range:</label>
+                            <select id="priceRange" class="form-control">
+                                <option value="0-50">$0 - $50</option>
+                                <option value="50-100">$50 - $100</option>
+                                <option value="100-200">$100 - $200</option>
+                            </select>
+                        </div>
+                        <!-- Add more filters as needed -->
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary btn-block" id="submitBtn">Search</button>
+                </form>
+                <!-- Message to display while searching -->
+                <div id="searchingMessage" class="mt-3 text-center"></div>
+            </div>
+        </div>
+
+        <div class="row mt-5">
+            <div class="col-md-8 offset-md-2">
+                <div id="results">
+                    <!-- The search results will be displayed here -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS and dependencies (optional) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.9/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+    <script>
+        document.getElementById('bookingForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            var source = document.getElementById('source').value;
+            var destination = document.getElementById('destination').value;
+            var date = document.getElementById('date').value;
+            var mode = document.querySelector('input[name="mode"]:checked').value;
+            var hotelOption = document.getElementById('hotelOption').checked;
+
+            // Display "Searching for respective booking" message
+            document.getElementById('searchingMessage').innerHTML = "Searching for respective booking...";
+
+            // If hotel option is selected, hide source location field
+            if (hotelOption) {
+                document.getElementById('sourceGroup').style.display = 'none';
+            } else {
+                document.getElementById('sourceGroup').style.display = 'block';
+            }
+
+            // Show hotel filters if hotel option is selected
+            var hotelFilters = document.getElementById('hotelFilters');
+            if (hotelOption) {
+                hotelFilters.style.display = 'block';
+            } else {
+                hotelFilters.style.display = 'none';
+            }
+
+            // Here you would send this data to your server for processing and API calls
+            // You would also handle the response from the server to display the results
+
+            // Simulate a delay (remove this in your actual implementation)
+            setTimeout(function() {
+                document.getElementById('searchingMessage').innerHTML = ""; // Clear the message
+                // You can update the results here based on the server response
+            }, 2000); // Simulate a 2-second delay
+        });
+
+
+
+
+        document.getElementById('bookingForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    var source = document.getElementById('source').value;
+    var destination = document.getElementById('destination').value;
+    var date = document.getElementById('date').value;
+    var mode = document.querySelector('input[name="mode"]:checked').value;
+    var hotelOption = document.getElementById('hotelOption').checked;
+
+    // Display "Searching for respective booking" message
+    document.getElementById('searchingMessage').innerHTML = "Searching for respective booking...";
+
+    // If hotel option is selected, hide source location field
+    if (hotelOption) {
+        document.getElementById('sourceGroup').style.display = 'none';
+    } else {
+        document.getElementById('sourceGroup').style.display = 'block';
+    }
+
+    // Show hotel filters if hotel option is selected
+    var hotelFilters = document.getElementById('hotelFilters');
+    if (hotelOption) {
+        hotelFilters.style.display = 'block';
+    } else {
+        hotelFilters.style.display = 'none';
+    }
+
+    // Here you would send this data to your server for processing and API calls
+    // You would also handle the response from the server to display the results
+
+    // Simulate a delay (remove this in your actual implementation)
+    setTimeout(function() {
+        document.getElementById('searchingMessage').innerHTML = ""; // Clear the message
+        // You can update the results here based on the server response
+    }, 2000); // Simulate a 2-second delay
+});
+
+// Add an event listener to the hotel option checkbox to toggle the hotel filters
+document.getElementById('hotelOption').addEventListener('change', function() {
+    var hotelFilters = document.getElementById('hotelFilters');
+    if (this.checked) {
+        hotelFilters.style.display = 'block';
+    } else {
+        hotelFilters.style.display = 'none';
+    }
+});
+
+    </script>
+
+
+
+
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meghalaya Marketplace</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #5b59df;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        nav {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 10px;
+        }
+
+        .shop-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            margin: 20px;
+        }
+
+        .shop-card {
+            width: 300px;
+            border: 1px solid #ddd;
+            margin: 10px;
+            padding: 10px;
+        }
+
+        .shop-image {
+            max-width: 100%;
+            height: auto;
+        }
+
+        @media screen and (max-width: 768px) {
+            .shop-card {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Meghalaya Marketplace</h1>
+    </header>
+    <nav>
+        <a href="#PoliceBazar">Police Bazar</a>
+        <a href="#BaraBazar">Bara Bazar (Lewduh Market)</a>
+        <a href="#IewDuhMarket">Iew Duh Market</a>
+        <a href="#HandicraftsEmporium">Handicrafts Emporium</a>
+        <a href="COUPON.php">Go to Offer Zone</a>
+
+    </nav>
+    <div class="shop-container">
+        <div class="shop-card" id="PoliceBazar">
+            <h2>Police Bazar, Shillong</h2>
+            <img class="shop-image" src="https://www.trawell.in/admin/images/upload/648495434Shillong_Police_Bazar_Main.jpg" alt="Police Bazar">
+            <p><strong>Description:</strong> The most bustling market in Shillong, it's a hub for tourists and locals alike.</p>
+            <p><strong>Best Purchases:</strong> Handicrafts, traditional Khasi clothes, and local produce. It's also an excellent place to sample local foods and sweets.</p>
+        </div>
+        
+        <div class="shop-card" id="BaraBazar">
+            <h2>Bara Bazar (Lewduh Market), Shillong</h2>
+            <img class="shop-image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSK4yZf2V-SpJIe_3JyoFdvNsVDIEuUPUNINg&usqp=CAU" alt="Bara Bazar">
+            <p><strong>Description:</strong> One of the oldest and largest traditional markets in the northeast, primarily run by local Khasi women.</p>
+            <p><strong>Best Purchases:</strong> Handwoven shawls, bamboo handicrafts, traditional jewelry, and spices. You can also find fresh local produce, meats, and traditional fermented foods. It's a great place to experience local culture.</p>
+        </div>
+
+        <div class="shop-card" id="IewDuhMarket">
+            <h2>Iew Duh Market, Shillong</h2>
+            <img class="shop-image" src="https://content.jdmagicbox.com/comp/shillong/t8/9999px364.x364.161018123328.v5t8/catalogue/deepak-processors-iewduh-shillong-readymade-garment-retailers-hj31xju.jpg" alt="Iew Duh Market">
+            <p><strong>Description:</strong> A traditional local market where you can witness the day-to-day life of the locals.</p>
+            <p><strong>Best Purchases:</strong> Fermented fish, local fruits and vegetables, and traditional Khasi garments. This market gives a glimpse of the local way of life, making it more than just a shopping experience.</p>
+        </div>
+
+        <div class="shop-card" id="HandicraftsEmporium">
+            <h2>Handicrafts Emporium, Shillong</h2>
+            <img class="shop-image" src="https://cultureandheritage.org/wp-content/uploads/2022/05/tripura-handicrafts.jpg" alt="Handicrafts Emporium">
+            <p><strong>Description:</strong> Managed by the state's Directorate of Handicrafts and Handlooms, this emporium showcases the rich arts and crafts of Meghalaya.</p>
+            <p><strong>Best Purchases:</strong> Cane and bamboo crafts, handwoven textiles, and wooden artifacts. This is the ideal place to buy authentic Meghalayan handicrafts.</p>
+        </div>
+        <div class="shop-card" onclick="openWebpage('coupon.html')" id="Offer Zone">
+            <!-- Offer Zone content -->
+        </div>
+    </div>
+</body>
+</html>

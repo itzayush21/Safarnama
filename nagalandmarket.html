@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nagaland Marketplace</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #edbe56;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        nav {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 10px;
+        }
+
+        .shop-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            margin: 20px;
+        }
+
+        .shop-card {
+            width: 300px;
+            border: 1px solid #ddd;
+            margin: 10px;
+            padding: 10px;
+        }
+
+        .shop-image {
+            max-width: 100%;
+            height: auto;
+        }
+
+        @media screen and (max-width: 768px) {
+            .shop-card {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Nagaland Marketplace</h1>
+    </header>
+    <nav>
+        <a href="COUPON.php">Go to Offer Zone</a>
+    </nav>
+    <div class="shop-container">
+        <div class="shop-card" id="BarnwalSweetShop">
+            <h2>Nagaland Sales Emporiun</h2>
+            <img class="shop-image" src="https://im.hunt.in/cg//kohima/City-Guide//nagas.jpg" alt="Nagaland Sales Emporiun">
+            <p><strong>Location:</strong> NHHDC, Kohima, Nagaland 797001</p>
+            <p><strong>Price Range:</strong> Starting from 900/- only</p>
+        </div>
+        
+        <div class="shop-card" id="KanakDurgaSynthetics">
+            <h2>Naga Traditional Attire Store</h2>
+            <img class="shop-image" src="https://imgs.search.brave.com/JcFYuU22S-5HZ3Hw-C5DgoftaSgfCL4k26lDbqYBGfo/rs:fit:860:0:0/g:ce/aHR0cHM6Ly93d3cu/dGhlYmVzdHNpbmdh/cG9yZS5jb20vd3At/Y29udGVudC91cGxv/YWRzLzIwMTcvMDQv/ZmFicmljLXNob3Bz/LWF0LXRleHRpbGUt/Y2VudHJlLXNpbmdh/cG9yZS5qcGc" alt="Kanak Durga Synthetics">
+            <p><strong>Location:</strong> Vipiele Complex, Razhu Point, Kohima 797001</p>
+            <p><strong>Price Range:</strong> Starting from 299/-</p>
+        </div>
+
+        <div class="shop-card" id="ManalishaShoppingCentre">
+            <h2>Tuensang Main Market</h2>
+            <img class="shop-image" src="https://oneintheorangejacket.com/wp-content/uploads/2023/07/Peren-Market-1024x682.jpg" alt="Manalisha Shopping Centre">
+            <p><strong>Location:</strong> Main bazar, Tuensang, Nagaland 798612</p>
+            <p><strong>Price Range:</strong> Starting from 350/- only</p>
+        </div>
+
+        <div class="shop-card" id="PramodLadooBhandar">
+            <h2>Mon town Market</h2>
+            <img class="shop-image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSrVnbq2y1ATrqGQyAKJMzZE37mnvC_tXszTA&usqp=CAU" alt="Pramod Ladoo Bhandar">
+            <p><strong>Location:</strong> Mon Town,Nagaland-798621</p>
+            <p><strong>Price Range:</strong> Starting from 45/- only</p>
+        </div>
+        <div class="offerzone" onclick="openWebpage('coupon.html')" id="Go to offerzone">
+            <!-- Offer Zone content -->
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orissa Marketplace</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #666edc;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        nav {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 10px;
+        }
+
+        .shop-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            margin: 20px;
+        }
+
+        .shop-card {
+            width: 300px;
+            border: 1px solid #ddd;
+            margin: 10px;
+            padding: 10px;
+        }
+
+        .shop-image {
+            max-width: 100%;
+            height: auto;
+        }
+
+        @media screen and (max-width: 768px) {
+            .shop-card {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Odhisa Marketplace</h1>
+    </header>
+    <nav>
+        <a href="#BMC Keshari Mall">BMC Keshari Mall</a>
+        <a href="#Ekamra Haat">Ekamra Haat</a>
+        <a href="#Market-Building">Market Building</a>
+        <a href="COUPON.php">Go to Offer Zone</a>
+    </nav>
+    <div class="shop-container">
+        <div class="shop-card" id="BMC Keshari Mall">
+            <h2>BMC Keshari Mall</h2>
+            <img class="shop-image" src="https://assets.traveltriangle.com/blog/wp-content/uploads/2019/08/BMC-Keshari-Mall1.jpg" alt="BMC Keshari Mall">
+            <p><strong>Location:</strong> Near Market Building, Ashok Nagar, 2nd St, Unit-2, Ashok Nagar, Bhubaneswar, Odisha 751007</p>
+            <p><strong>Price Range:</strong> Starting from 99/- only</p>
+        </div>
+        
+        <div class="shop-card" id="Ekamra Haat">
+            <h2>Ekamra Haat</h2>
+            <img class="shop-image" src="https://assets.traveltriangle.com/blog/wp-content/uploads/2019/08/Ekamra-Haat1.jpg" alt="Ekamra Haat">
+            <p><strong>Location:</strong> Madhusudam Marg, Unit 3, Bhubaneswar, Odisha 751001</p>
+            <p><strong>Price Range:</strong> Starting from 50/- only</p>
+        </div>
+        </div>
+
+        <div class="shop-card" id="Market-Building">
+            <h2>Market Building</h2>
+            <img class="shop-image" src="https://assets.traveltriangle.com/blog/wp-content/uploads/2019/08/Market-Building1.jpg" alt="Market Building">
+            <p><strong>Location:</strong>2nd St, Unit-2, Ashok Nagar, Bhubaneswar, Odisha 751001.</p>
+            <p><strong>Price Range:</strong> Starting from 999/- only</p>
+        </div>
+
+        <!-- Add Offer Zone content here -->
+        <div class="shop-card" onclick="openWebpage('coupon.html')" id="Offer Zone">
+            <!-- Offer Zone content -->
+        </div>
+    </div>
+</body>
+</html>

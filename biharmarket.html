@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bihar Marketplace</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #efa2e6;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        nav {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 10px;
+        }
+
+        .shop-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            margin: 20px;
+        }
+
+        .shop-card {
+            width: 300px;
+            border: 1px solid #ddd;
+            margin: 10px;
+            padding: 10px;
+        }
+
+        .shop-image {
+            max-width: 100%;
+            height: auto;
+        }
+
+        @media screen and (max-width: 768px) {
+            .shop-card {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Bihar Marketplace</h1>
+    </header>
+    <nav>
+        <a href="COUPON.php">Go to Offer Zone</a>
+    </nav>
+    <div class="shop-container">
+        <div class="shop-card" id="BarnwalSweetShop">
+            <h2>Barnwal Sweet Shop</h2>
+            <img class="shop-image" src="https://im.hunt.in/cg/Bihar/Rajgir/City-Guide/Kakin.jpg" alt="Barnwal Sweet Shop">
+            <p><strong>Location:</strong> Panchwati Nagar, Station road, Rajgir</p>
+            <p><strong>Price Range:</strong> Starting from 899/- only</p>
+        </div>
+        
+        <div class="shop-card" id="KanakDurgaSynthetics">
+            <h2>Kanak Durga Synthetics</h2>
+            <img class="shop-image" src="https://imgs.search.brave.com/JcFYuU22S-5HZ3Hw-C5DgoftaSgfCL4k26lDbqYBGfo/rs:fit:860:0:0/g:ce/aHR0cHM6Ly93d3cu/dGhlYmVzdHNpbmdh/cG9yZS5jb20vd3At/Y29udGVudC91cGxv/YWRzLzIwMTcvMDQv/ZmFicmljLXNob3Bz/LWF0LXRleHRpbGUt/Y2VudHJlLXNpbmdh/cG9yZS5qcGc" alt="Kanak Durga Synthetics">
+            <p><strong>Location:</strong> Rohtas, Sasaraam Bazaar, Dharmshala Road, Nalanda</p>
+            <p><strong>Price Range:</strong> Starting from 300/-</p>
+        </div>
+
+        <div class="shop-card" id="ManalishaShoppingCentre">
+            <h2>Manalisha Shopping Centre</h2>
+            <img class="shop-image" src="https://imgs.search.brave.com/a8nO7VGyPRBBPuOAGb9No5_4zU8F9V1HJUKIk1USWX0/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9pbS5o/dW50LmluL2NnL05h/bGFuZGEvQ2l0eS1H/dWlkZS9jb3Zlci5q/cGc" alt="Manalisha Shopping Centre">
+            <p><strong>Location:</strong> Nimal, Rajgir, Bihar</p>
+            <p><strong>Price Range:</strong> Starting from 150/- only</p>
+        </div>
+
+        <div class="shop-card" id="PramodLadooBhandar">
+            <h2>Pramod Ladoo Bhandar</h2>
+            <img class="shop-image" src="https://imgs.search.brave.com/DT0pnqRU_2qZc_9IuzE4UO96v1jUVswQQM0RKGiRzvM/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9saDYu/Z29vZ2xldXNlcmNv/bnRlbnQuY29tL21O/R2ZsVzVMRU1uQVZD/VGpWSUF4Nkl1dVpC/X08zZ1J4ZmFQMEZZ/WWhPQW1wTFRGbl9M/a0Z3NmVhQkJNWnQt/eHg4UT13MTA4MC1r/LW5v" alt="Pramod Ladoo Bhandar">
+            <p><strong>Location:</strong> Gndhi Maidan, Church Road, Gaya, Bihar</p>
+            <p><strong>Price Range:</strong> Starting from 45/- only</p>
+        </div>
+        <div class="offerzone" onclick="openWebpage('coupon.html')" id="Go to offerzone">
+            <!-- Offer Zone content -->
+        </div>
+    </div>
+</body>
+</html>

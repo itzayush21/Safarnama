@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>State Selector</title>
+</head>
+<style>
+        body {
+            background-image: url('mark.jpg'); /* Add your background image URL here */
+            background-size: cover;
+            background-repeat: no-repeat;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        label, select, button {
+            margin: 10px;
+            font-size: 18px;
+        }
+
+        select {
+            padding: 5px;
+            border: none;
+            border-radius: 5px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+<body>
+    <label for="stateSelect">Select a State:</label>
+    <select id="stateSelect">
+        <option value="assam">Assam</option>
+        <option value="bihar">Bihar</option>
+        <option value="chattisgarh">chattisgarh</option>
+        <option value="jharkhand">Jharkhand</option>
+        <option value="nagaland">Nagaland</option>
+        <option value="manipur">Manipur</option>
+        <option value="mizoram">Mizoram</option>
+        <option value="meghalaya">Meghalaya</option>
+        <option value="odisha">Odisha</option>
+        <option value="tripura">Tripura</option>
+    </select>
+
+    <button onclick="goToSelectedPage()">Go</button>
+
+    <script>
+        function goToSelectedPage() {
+            var selectElement = document.getElementById("stateSelect");
+            var selectedValue = selectElement.value;
+
+            // Define the URLs for each state
+            var stateURLs = {
+                assam: "assamthings.html",
+                bihar: "biharmarket.html",
+                chattisgarh:"chattisgarhmarket.html",
+                jharkhand: "jharkhandmarket.html",
+                nagaland: "nagalandmarket.html",
+                manipur: "manipurmarket.html",
+                mizoram: "mizoram.html",
+                meghalaya: "meghalayamarket.html",
+                odisha: "odhisamarket.html",
+                tripura: "tripuramarket.html"
+                
+            };
+
+            // Get the URL for the selected state
+            var selectedURL = stateURLs[selectedValue];
+
+            // Redirect to the selected URL
+            if (selectedURL) {
+                window.location.href = selectedURL;
+            }
+        }
+    </script>
+</body>
+</html>

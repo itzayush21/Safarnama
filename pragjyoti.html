@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emporium</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header class="bg-dark text-white text-center py-3">
+        <h1>Pragjyoti Assam Emporium
+        </h1>
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a class="nav-link" href="#about">About Us</a></li>
+                <li class="nav-item"><a class="nav-link" href="#products">Products</a></li>
+                <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="about" class="py-5">
+        <div class="container">
+            <h2 class="text-center">About Us</h2>
+            <p class="lead text-center">Pragjyoti Assam Emporium celebrates the rich cultural heritage of Assam through exquisite handcrafted treasures.</p>
+        </div>
+    </section>
+
+    <section id="products" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">Our Products</h2>
+            <div class="row">
+                <div class="col-lg-6 mb-4">
+                    <div class="card">
+                        <img src="https://howtostartanllc.com/images/business-ideas/business-idea-images/basket-weaving.jpg" class="card-img-top" alt="Tea 1">
+                        <div class="card-body text-center">
+                            <h3 class="card-title">Basket Weaving</h3>
+                            <p class="card-text">Useful to decorate homes largely</p>
+                            <p class="card-text"><strong>Price (per pairs): RS. 750.00</strong></p>
+                            <button class="btn btn-warning" ><a href="#container">Book Now</a></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 mb-4">
+                    <div class="card">
+                        <img src="https://adn-static1.nykaa.com/nykdesignstudio-images/pub/media/catalog/product/d/3/tr:w-270,/d33cf752920_1.jpg?rnd=20200526195200" class="card-img-top" alt="Tea 2">
+                        <div class="card-body text-center">
+                            <h3 class="card-title">Handmade Shawl</h3>
+                            <p class="card-text">Smooth and Luxirous</p>
+                            <p class="card-text"><strong>Price (per Shawl): 750.00</strong></p>
+                            <button class="btn btn-warning"><a class="nav-link" href="#container">Book Now</a></button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Add more products as needed -->
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-5">
+        <div class="container">
+            <h2 class="text-center">Contact Us</h2>
+            <p class="lead text-center">Have questions or want to place an order? Reach out to us!</p>
+        </div>
+    </section>
+
+    <section id="order" class="py-5 bg-light">
+        <div class="container" id="container">
+            <h2 class="text-center mb-4">Order Summary</h2>
+            <form>
+                <div class="form-group">
+                    <label for="product">Select Product:</label>
+                    <select class="form-control" id="product" name="product">
+                        <option value="Basket Weaving">Basket Weaving</option>
+                        <option value="Shawl">Shawl</option>
+
+                        <!-- Add more options as needed -->
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="quantity">Quantity:
+                    <input type="number" class="form-control" id="quantity" name="quantity" placeholder="Enter Quantity"
+                        min="1" required>
+                    </label>
+                    <div class="form-group">
+                        <label for="coupon">Coupon Code:
+                            <input type="text" class="form-control" id="coupon" name="coupon" value="coupon">
+                        </label>
+                    </div>
+                    <button id="tea" onclick="calculateTotal(event,coupon)">Calculate</button>
+                    <p id="result"></p>
+                </div>
+
+                <!-- <button id="tea1" onclick="calculateFinal(event,a)">Calculate1</button>
+                <p id="result1"></p> -->
+
+                <button type="submit" class="btn btn-warning"><a href="qr.jpg">Proceed to Checkout</a></button>
+            </form>
+        </div>
+    </section>
+
+    <footer class="bg-dark text-white text-center py-3">
+        <p>&copy; 2023 Pragjyoti Assam Emporium. All rights reserved.</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.7/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        function bookNow(product, price) {
+            const quantity = 1; // Default quantity is 1 kg
+            const coupon = document.getElementById('coupon').value;
+            console.log(coupon);
+            const total = price * quantity;
+
+            // Display a confirmation message
+            alert(`You have booked ${quantity} kg of ${product} for $${total}. Coupon: ${coupon || 'None'}`);
+        }
+
+        
+        function calculateTotal(event,coupon) {
+            event.preventDefault();
+            let pricePerItem = 750;  // Example Price
+            let quantity = document.getElementById("quantity").value;
+            let result = document.getElementById("result");
+            let totalPrice = pricePerItem * quantity;
+            val = "sJ7@Vu0w";
+            // if(!coupon)
+            // console.log("hi");
+            if (coupon.value === val) {
+                totalPrice =( (totalPrice * 90) / 100);
+                
+
+            }
+            else {
+                totalPrice=totalPrice;
+
+            }
+
+
+            // document.getElementById("tea").addEventListener("submit",function(event) {
+            //     event.preventDefault();
+            // })
+
+            result.innerText = "Total Price: Rs." + totalPrice;
+            // document.getElementById("tea").addEventListener("submit",function(event) {
+            //     event.preventDefault();
+            // })
+           
+            // preventDefault();
+
+
+
+        }
+
+       
+
+
+
+
+
+
+
+    </script>
+
+
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chattisgarh Marketplace</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #ca88f1;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        nav {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 10px;
+        }
+
+        .shop-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            margin: 20px;
+        }
+
+        .shop-card {
+            width: 300px;
+            border: 1px solid #ddd;
+            margin: 10px;
+            padding: 10px;
+        }
+
+        .shop-image {
+            max-width: 100%;
+            height: auto;
+        }
+
+        @media screen and (max-width: 768px) {
+            .shop-card {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Chattisgarh Marketplace</h1>
+    </header>
+    <nav>
+        
+        <a href="COUPON.php">Go to Offer Zone</a>
+    </nav>
+    <div class="shop-container">
+        <div class="shop-card" id="RoyalCollection">
+            <h2>Royal Collection</h2>
+            <img class="shop-image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJhUYZw4-6bCsKFU8pZ1cM770RURQmWxtq6Q&usqp=CAU" alt="Royal Collection">
+            <p><strong>Location:</strong> Ravi Bhawan, Raipur, Chattisgarh</p>
+            <p><strong>Price Range:</strong> Starting from 500/- only</p>
+        </div>
+        
+        <div class="shop-card" id="JyotiSweetsAndNamkeen">
+            <h2>Jyoti Sweets and Namkeen</h2>
+            <img class="shop-image" src="https://www.mangaloretoday.com/contentfiles/2019/sweet-shop-vijayawada.jpg" alt="Jyoti Sweets and Namkeen">
+            <p><strong>Location:</strong> Shastri Bazaar, Krishak Nagar, Raipur, Chattisgarh</p>
+            <p><strong>Price Range:</strong> Starting from 99/- only</p>
+        </div>
+
+        <div class="shop-card" id="LavsanyaGifts">
+            <h2>Lavsanya Gifts</h2>
+            <img class="shop-image" src="https://content.jdmagicbox.com/comp/kolkata/d8/033pxx33.xx33.170911145230.h1d8/catalogue/lavanya-barasat-kolkata-gift-shops-92kvyo9rfy.jpg?clr=" alt="Lavsanya Gifts">
+            <p><strong>Location:</strong> Banjari road, Rajesh Nagar, Bilaspur, Chattisgarh</p>
+            <p><strong>Price Range:</strong> Starting from 600/- only</p>
+        </div>
+        <div class="shop-card" onclick="openWebpage('coupon.html')" id="Offer Zone">
+            <!-- Offer Zone content -->
+        </div>
+    </div>
+</body>
+</html>

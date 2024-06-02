@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manipur Marketplace</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #7ef7dd;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        nav {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 10px;
+        }
+
+        .shop-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            margin: 20px;
+        }
+
+        .shop-card {
+            width: 300px;
+            border: 1px solid #ddd;
+            margin: 10px;
+            padding: 10px;
+        }
+
+        .shop-image {
+            max-width: 100%;
+            height: auto;
+        }
+
+        @media screen and (max-width: 768px) {
+            .shop-card {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Manipur Marketplace</h1>
+    </header>
+    <nav>
+        <a href="COUPON.php">Go to Offer Zone</a>
+    </nav>
+    <div class="shop-container">
+        <div class="shop-card" id="BarnwalSweetShop">
+            <h2>Manikunj Moment</h2>
+            <img class="shop-image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZAPLtZsMZdsZ2qhkD0rqur6sW7GWT733aXw&usqp=CAU" alt="Paona">
+            <p><strong>Location:</strong> Paona Bazar, Imphal</p>
+            <p><strong>Price Range:</strong> Starting from 699/- only</p>
+        </div>
+        
+        <div class="shop-card" id="KanakDurgaSynthetics">
+            <h2> Tera Bazaar – For Gorgeous Accessories</h2>
+            <img class="shop-image" src="https://img.traveltriangle.com/blog/wp-content/uploads/2019/04/Mexico-Cover-400x267.jpg" alt="tera bazar">
+            <p><strong>Location:</strong> Imphal West,Manipur</p>
+            <p><strong>Price Range:</strong> Starting from 100/-</p>
+        </div>
+
+        <div class="shop-card" id="ManalishaShoppingCentre">
+            <h2>ema keithel market-Run by all Woman</h2>
+            <img class="shop-image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRlFxB_UHq-0AA0L4OK5e-QUR_V23szzdpyUw&usqp=CAU" alt="ema">
+            <p><strong>Location:</strong> Thangal Bazar, Imphal, Manipur 795001</p>
+            <p><strong>Price Range:</strong> Starting from 150/- only</p>
+        </div>
+
+        <div class="offerzone" onclick="openWebpage('coupon.html')" id="Go to offerzone">
+            <!-- Offer Zone content -->
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,741 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Add your meta tags, title, and CSS links here -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Safarnama.</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    <style>
+        footer {
+            background-color: white;
+            color: black;
+            padding: 20px;
+            font-family: Arial;
+        }
+
+        .title {
+            font-weight: bold;
+            margin: 20px;
+        }
+
+        .title~div {
+            margin-bottom: 15px;
+        }
+
+        .menu-column {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            gap: 15px;
+        }
+
+        @media screen and (max-width: 768px) {
+            .menu-column {
+                grid-template-columns: 1fr 1fr; 
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            .menu-column {
+                grid-template-columns: 1fr; 
+            }
+        }
+        fieldset {
+            border-left: none;
+            border-right: none;
+            border-bottom: none;
+            text-align: center;
+            width: 50%;
+            margin-left: auto; 
+           margin-right: auto; 
+          
+        }
+        legend {
+            padding-left: 10px;
+            padding-right: 10px;
+           
+        }
+        a {
+    text-decoration:none;
+ }
+    </style>
+    
+    <style>
+        /* Your existing styles */
+
+       
+        
+        .hdr{
+            display: flex;
+            justify-content:space-around;
+            align-items: center;
+        }
+        .hdrs{
+             font-family: Arial, Helvetica, sans-serif;
+             
+             font-size:25px;
+             display:flex
+        }
+        .pad{
+            padding:20px;
+        }
+        .hfr span{
+            padding:20px;
+            font-size: 20px;
+        }
+        .head{
+            height:30px;
+            background-color: black;
+            text-align:center;
+            color:white;
+            padding-top:15px;
+            padding-bottom: 35px;
+            margin-bottom: 10px;
+            font-size: 15px;
+            font-weight: bold;
+
+        }
+        .head span{
+            color:goldenrod;
+        }
+        
+        
+
+        /* New styles for sidebar */
+        .sidebar {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            top: 0;
+            left: 0;
+            background-color: #383537;
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 60px;
+        }
+
+        .sidebar a {
+            padding: 15px 25px;
+            text-decoration: none;
+            font-size: 25px;
+            color: #818181;
+            display: block;
+            transition: 0.3s;
+        }
+
+        .sidebar a:hover {
+            color: #f1f1f1;
+        }
+
+        .closebtn {
+            position: absolute;
+            top: 0;
+            left: 25px;
+            font-size: 36px;
+            margin-left: 50px;
+       
+        }
+        #guest{
+            color:antiquewhite;
+        }
+
+        <style>
+        /* Reset some default styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        /* Navbar styles */
+        /*.navbar {
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }*/
+        
+        /* Slider container */
+        .slider-container {
+            border-color: #383537;
+            position: relative;
+            max-width: 100%;
+            overflow: hidden;
+            z-index: -1;
+        }
+        
+        /* Image slider styles */
+        .image-slider {
+            width: 100%;
+            height: 500px;
+            display: flex;
+            transition: transform 1s ease-in-out;
+        }
+        
+        .image-slide-container {
+            flex: 0 0 100%;
+            max-width: 100%;
+            height: auto;
+            position: relative;
+        }
+
+        .image-slide {
+            width: 100%;
+            height: 100%;
+        }
+
+        .fact {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            background-color: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 10px;
+            width: 100%;
+            display:flex;
+            justify-content:center;
+            align-content:center;
+
+        }
+      
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        /* .container {
+        display: flex;
+        flex-wrap: wrap;
+        }
+
+        
+        .explore-container {
+            flex: 1;
+            margin: 20px;
+
+            position: relative;
+            max-width: 300px;
+            margin: 20px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        .explore-image {
+            width: 100%;
+            height: auto;
+        }
+
+        .explore-info {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            font-style: italic;
+            font-family: sans-serif;
+            background-color: rgba(0, 0, 0, 0.7);
+            box-shadow: inset;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            border-radius: 0 0 8px 8px;
+            display: none; 
+
+        }
+
+        
+        .explore-page {
+            display: none;
+        }
+
+       
+        .explore-container:hover {
+            transform: scale(1.05);
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .explore-container:hover .explore-info {
+            transition: transform 0.5s ease-in-out;
+            display: block;
+        }*/
+        /* Add this CSS code for container alignment and spacing */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* Distribute containers evenly horizontally */
+}
+
+.explore-container {
+    flex: 1;
+    max-width: calc(33.33% - 20px); /* Adjust the width based on the number of columns you want */
+    margin: 10px; /* Adjust margin for spacing */
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.explore-image {
+    width: 100%;
+    height: auto;
+}
+
+.explore-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    font-style: italic;
+    font-family: sans-serif;
+    background-color: rgba(0, 0, 0, 0.7);
+    box-shadow: inset;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    border-radius: 0 0 8px 8px;
+    display: none;
+}
+
+.explore-container:hover {
+    transform: scale(1.05);
+    transition: transform 0.5s ease-in-out;
+}
+
+.explore-container:hover .explore-info {
+    transition: transform 0.5s ease-in-out;
+    display: block;
+}
+
+    
+.hdrs a {
+    text-decoration:none;
+    color:inherit;
+}
+.hdrs a:hover {
+    text-decoration:underline;
+}
+    
+
+    
+
+        
+        
+
+    </style>
+</head>
+<body>
+    <header>
+        <!-- Your existing header code -->
+        <div class="hdr">
+            <div style="font-weight: bold; font-size: 40px;">Safarnama.</div>
+            <div class="hdrs"><span class="pad"><a href="index.html">Home</a></span><span class="pad"><a href="explore.html">Explore</a></span><span class="pad"><a href=instantbooking.html target=”_blank”>Instant booking</a></span><span class="pad"><a href="game.html" target=”_blank”>Gamezone</a></span ><span class="pad" ><a href="COUPON.php" >Offerzone</a></span><span class="pad"> <a href="blog.php" >Blog</a></span></div>
+            
+               
+                
+        
+
+        <div class="hfr">
+            <span class="bi bi-heart"></span>
+            <span class="bi bi-search"></span>
+            <span class="bi bi-person" onclick="openNav()"></span>
+            <span><a href="marketplace.html"><span class="bi bi-cart"></span></a></span>
+        </div>
+        </div>
+        <div class="head"><span class="bi bi-lightning-fill"></span>HAPPY HOLIDAY DEALS ON EVRYTHING <span class="bi bi-lightning-fill"></span></div>  
+
+
+        
+    </header>
+
+    <!-- Add the sidebar content -->
+    <div id="mySidebar" class="sidebar">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+        <a href="#" id="guestpic"></a>
+
+        <a href="#" id="guest">Hi,guest</a>
+        <a href="#">Profile</a>
+        <a href="#">Settings</a>
+        <a href="login.html" onclick="openloginform() ">sign up</a>
+        <a href="login_info.html">login</a>
+        <a href="#">Logout</a>
+
+    </div>
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+    <!-- image sliders on home page open -->
+
+
+
+
+
+    <div class="slider-container">
+        <div class="image-slider">
+            <div class="image-slide-container">
+                <img class="image-slide" src="https://www.oyorooms.com/travel-guide/wp-content/uploads/2019/12/shutterstock_402120757-1-1280x720.webp" alt="Image 1">
+                <div class="fact">Bodh Gaya is the place where Siddhartha Gautama, known as the Buddha, attained enlightenment under the Bodhi tree around 2,500 years ago.</div>
+            </div>
+            <div class="image-slide-container">
+                <img class="image-slide" src="https://media.istockphoto.com/id/1044402406/photo/aerial-photo-of-ropeway-cable-car-gondola-ride-over-gangtok-city-during-sunset-in-sikkim-india.jpg?s=612x612&w=0&k=20&c=zZb-JHFCyY1vvaN3jCItlf70tfJoDcGLH_e1KD7BdmE=" alt="Image 2">
+                <div class="fact">Sikkim is India's least populous state and the only state to have an ethnic Nepali majority.</div>
+            </div>
+            <div class="image-slide-container">
+                <img class="image-slide" src="https://i0.wp.com/thenortheastindia.com/wp-content/uploads/2019/06/what-is-north-east-famous-for.jpg?fit=1920%2C1080&ssl=1" alt="Image 3">
+                <div class="fact">Forests in the Northeastern United States are known for their vibrant fall foliage.</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Add more containers as needed -->
+
+
+    <!-- image sliders on home page closed -->
+
+
+
+<!--<div class="container">
+    <div class="explore-container" onclick="openWebpage('assam.html')">
+        <a href="assam.html"><img   class="explore-image"  src="https://images.app.goo.gl/4RHLnS2bJqJpf4Vd7" alt="assam"></a>
+        <div class="explore-info">
+            <h3 >ASSAM</h3>
+            <p>This might come as a surprise to many of you but the state of Assam has its own anthem. The anthem is called "O Mur Apunar Dex"</p>
+            
+        </div>
+    </div>
+    <div class="explore-container" onclick="openExplorePage('paris')">
+        <img class="explore-image" src="https://www.holidify.com/images/compressed/flexPage_61.jpg" alt="Paris">
+        <div class="explore-info">
+            <h3>Paris</h3>
+            <p>Explore the beauty of tokyo, the City of Light.</p>
+            
+            
+        </div>
+    </div>
+    <div class="explore-container" onclick="openExplorePage('paris')">
+        <img class="explore-image" src="https://www.holidify.com/images/compressed/flexPage_61.jpg" alt="Paris">
+        <div class="explore-info">
+            <h3>Paris</h3>
+            <p>Explore the beauty of tokyo, the City of Light.</p>
+         </div>
+    </div>
+<div class="container">
+    <div class="explore-container" onclick="openExplorePage('paris')">
+        <img class="explore-image" src="https://www.holidify.com/images/compressed/flexPage_61.jpg" alt="Paris">
+        <div class="explore-info">
+            <h3>Paris</h3>
+            <p>Explore the beauty of tokyo, the City of Light.</p>
+         </div>
+    </div>
+    <div class="explore-container" onclick="openExplorePage('paris')">
+        <img class="explore-image" src="https://www.holidify.com/images/compressed/flexPage_61.jpg" alt="Paris">
+        <div class="explore-info">
+            <h3>Paris</h3>
+            <p>Explore the beauty of tokyo, the City of Light.</p>
+         </div>
+    </div>
+    <div class="explore-container" onclick="openExplorePage('paris')">
+        <img class="explore-image" src="https://www.holidify.com/images/compressed/flexPage_61.jpg" alt="Paris">
+        <div class="explore-info">
+            <h3>Paris</h3>
+            <p>Explore the beauty of tokyo, the City of Light.</p>
+         </div>
+    </div>
+ </div>
+    <div class="explore-container" onclick="openExplorePage('paris')">
+        <img class="explore-image" src="https://www.holidify.com/images/compressed/flexPage_61.jpg" alt="Paris">
+        <div class="explore-info">
+            <h3>Paris</h3>
+            <p>Explore the beauty of tokyo, the City of Light.</p>
+         </div>
+    </div>
+    <div class="explore-container" onclick="openExplorePage('paris')">
+        <img class="explore-image" src="https://www.holidify.com/images/compressed/flexPage_61.jpg" alt="Paris">
+        <div class="explore-info">
+            <h3>Paris</h3>
+            <p>Explore the beauty of tokyo, the City of Light.</p>
+         </div>
+    </div>
+    <div class="explore-container" onclick="openExplorePage('paris')">
+        <img class="explore-image" src="https://www.holidify.com/images/compressed/flexPage_61.jpg" alt="Paris">
+        <div class="explore-info">
+            <h3>Paris</h3>
+            <p>Explore the beauty of tokyo, the City of Light.</p>
+         </div>
+    </div>
+</div>-->
+<div class="container">
+    <!-- Container for Assam -->
+        
+    
+    <div class="explore-container" onclick="openWebpage('assam.html')">
+        <img class="explore-image" src="assam.avif" alt="Assam">
+        <div class="explore-info">
+            <h3>Assam</h3>
+            <p>Assam is known for its tea plantations.</p>
+        </div>
+    </div>
+
+    <!-- Container for Bihar -->
+    <div class="explore-container" onclick="openWebpage('bihar.html')">
+        <img class="explore-image" src="bihar.webp" alt="Bihar">
+        <div class="explore-info">
+            <h3>Bihar</h3>
+            <p>Bihar is the birthplace of Lord Buddha.</p>
+        </div>
+    </div>
+
+    <!-- Container for Jharkhand -->
+    <div class="explore-container" onclick="openWebpage('jharkhand.html')">
+        <img class="explore-image" src="jharkhand.avif" alt="Jharkhand">
+        <div class="explore-info">
+            <h3>Jharkhand</h3>
+            <p>Jharkhand is rich in mineral resources.</p>
+        </div>
+    </div>
+</div>
+
+    <!-- Container for Nagaland -->
+<div class="container">
+    <div class="explore-container" onclick="openWebpage('nagaland.html')">
+        <img class="explore-image" src="nagaland.webp" alt="Nagaland">
+        <div class="explore-info">
+            <h3>Nagaland</h3>
+            <p>Nagaland is known for its tribal culture.</p>
+        </div>
+    </div>
+
+    <!-- Container for Manipur -->
+    <div class="explore-container" onclick="openWebpage('manipur.html')">
+        <img class="explore-image" src="manipur.jpeg" alt="Manipur">
+        <div class="explore-info">
+            <h3>Manipur</h3>
+            <p>Manipur is famous for its classical dance forms.</p>
+        </div>
+    </div>
+
+    <!-- Container for Mizoram -->
+    <div class="explore-container" onclick="openWebpage('chattisgarh.html')">
+        <img class="explore-image" src="chhattisgarh.jpeg" alt="Mizoram">
+        <div class="explore-info">
+            <h3>Chattisgarh</h3>
+            <p>Chhattisgarh: Where Rich Heritage Meets Natural Splendor</p>
+        </div>
+    </div>
+</div>
+
+    <!-- Container for Meghalaya -->
+<div class="container">
+    <div class="explore-container" onclick="openWebpage('meghalaya.html')">
+        <img class="explore-image" src="meghalaya.avif" alt="Meghalaya">
+        <div class="explore-info">
+            <h3>Meghalaya</h3>
+            <p>Meghalaya receives the highest rainfall in India.</p>
+        </div>
+    </div>
+
+    <!-- Container for Odisha -->
+    <div class="explore-container" onclick="openWebpage('odhisa.html')">
+        <img class="explore-image" src="odisha.webp" alt="Odisha">
+        <div class="explore-info">
+            <h3>Odisha</h3>
+            <p>Odisha is home to the famous Konark Sun Temple.</p>
+        </div>
+    </div>
+
+    <!-- Container for Tripura -->
+    <div class="explore-container" onclick="openWebpage('tripura.html')">
+        <img class="explore-image" src="tripura.webp" alt="Tripura">
+        <div class="explore-info">
+            <h3>Tripura</h3>
+            <p>Tripura is known for its rich cultural heritage.</p>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+    
+
+    
+
+    <script>
+        // JavaScript to handle image sliding
+        let currentIndex = 0;
+        const images = [
+            'images1.jpeg',
+            'paris.webp',
+            'tokyo.webp',
+        ];
+
+        function changeImage() {
+            currentIndex = (currentIndex + 1) % images.length;
+            const translateX = currentIndex * -100;
+            document.querySelector('.image-slider').style.transform = `translateX(${translateX}%)`;
+        }
+
+        setInterval(changeImage, 5000);
+    </script>
+
+
+    <!-- Rest of your HTML content -->
+
+
+
+<script>   
+    function openWebpage(url) {
+        window.location.href = url;
+    }
+</script>
+
+
+
+
+
+
+
+
+
+
+    <!-- Add the JavaScript -->
+
+    <!--javascript for side navebar open-->
+    <script>
+        function openNav() {
+            document.getElementById("mySidebar").style.width = "250px";
+        }
+
+        function closeNav() {
+            document.getElementById("mySidebar").style.width = "0";
+        }
+    </script>
+    
+    <!--javascript for side navebar closed-->
+
+    <!--javascript for loginform open-->
+    <script>
+        function openloginform() {
+            document.getElementById("formbody").style.width = "250px";
+        }
+
+        function closeloginform() {
+            document.getElementById("formbody").style.width = "0";
+        }
+    </script>
+
+
+    <!--javascript for login form closed-->
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Add the sidebar content -->
+<div id="mySidebar" class="sidebar">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+    <a href="#" id="guestpic"></a>
+
+    <a href="#" id="guest">Hi,guest</a>
+    <a href="#">Profile</a>
+    <a href="#">Settings</a>
+    <a href="#" onclick="openLoginForm()">signup</a> 
+    <!-- Added onclick event -->
+    <a href="login_info.html">login</a>
+    <a href="#">Logout</a>
+</div>
+
+<!-- Rest of your HTML content -->
+
+<script>
+    function openLoginForm() {
+        document.getElementById("formbody").style.width = "250px";
+    }
+
+    function closeLoginForm() {
+        document.getElementById("formbody").style.width = "0";
+    }
+</script>
+
+<footer>
+        <fieldset>
+            <legend>New to safarnama?</legend>
+        </fieldset> 
+        <div class="menu-column">
+
+            <div>
+                <div class="title">Connect with us</div>
+                <div><a href="https://docs.google.com/forms/d/e/1FAIpQLSe74g2vVU4jRS8rioFc0fnerQbtMuLyZfFt8YCjjX1PdKggcw/viewform?usp=sf_link">Get email address</a></div>
+                <div><a href="https://docs.google.com/forms/d/e/1FAIpQLSdeiPnpQ5xHo7g587uVQldF6AheUWOOdeNQjZp04Cx97ACvXw/viewform?usp=sf_link">Contact Form Link</a></div>
+                <div><a href="tel:9334204351">Customer Service Number</a></div>
+            </div>
+
+            <div>
+                <div class="title">Functional Links</div>
+                <div><a href="https://drive.google.com/file/d/1ljS_yOxjkFoVw3BiAVQkTfazgH2Rx8vB/view?usp=drivesdk">Privacy Policy</a> </div>
+                <div><a href="https://drive.google.com/file/d/1ybDZcw3rpyB5K1NtELZBCaAXupfN6w9q/view?usp=drivesdk">Cookie Policy</a></div>
+                <div><a href="https://drive.google.com/file/d/1VAGnlw7rtzRpOF9k9upygbmPtQG7utl0/view?usp=drivesdk">Accessibility Statement</a></div>
+            </div>
+
+            <div>
+                <div class="title">Resources</div>
+                <div><a href="https://drive.google.com/file/d/1RIH9kdSPdJKpCbHOH762Ib0-Urk5ASzI/view?usp=drivesdk">Latest Research & Trends</a></div>
+                <div><a href="https://drive.google.com/file/d/1RIH9kdSPdJKpCbHOH762Ib0-Urk5ASzI/view?usp=drivesdk">Best Practices Guide</a></div>         
+                <div><a href="https://drive.google.com/file/d/1RIH9kdSPdJKpCbHOH762Ib0-Urk5ASzI/view?usp=drivesdk">COVID-19 Safety Measures</a></div>
+                <div><a href="https://drive.google.com/file/d/135yYAovoVKrBvJnCtYxWeO7FrGe9sdwg/view?usp=drivesdk">Sustainability in Tourism</a></div>
+            </div>
+
+            <div>
+                <div class="title">Partners</div>
+                <div><a  href=" ">Hotels & Resorts</a</div>
+                <div><a  href=" ">Travel Agencies</a></div>
+                <div><a  href=" ">Local Tour Operators</a></div>
+                <div><a  href=" ">Transportation Providers</a></div>
+            </div>
+        </div>
+
+    </footer>
+
+
+</body>
+</html>

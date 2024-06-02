@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tripura Marketplace</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #dc9ea3;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        nav {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 10px;
+        }
+
+        .shop-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            margin: 20px;
+        }
+
+        .shop-card {
+            width: 300px;
+            border: 1px solid #ddd;
+            margin: 10px;
+            padding: 10px;
+        }
+
+        .shop-image {
+            max-width: 100%;
+            height: auto;
+        }
+
+        @media screen and (max-width: 768px) {
+            .shop-card {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Tripura Marketplace</h1>
+    </header>
+    <nav>
+        <a href="COUPON.php">Go to Offer Zone</a>
+    </nav>
+    <div class="shop-container">
+        <div class="shop-card" id="HandloomAndHandicraftsEmporium">
+            <h2>Handloom and Handicrafts Emporium</h2>
+            <img class="shop-image" src="https://tms.tourgenie.com/assets/images/imgblog/blogimg_24_3fe00db15f84c8314571fcd638e961cd.webp" alt="Handloom and Handicrafts Emporium">
+            <p><strong>Location:</strong> Prantik club, Agartala, Tripura</p>
+            <p><strong>Price Range:</strong> Starting from 500/- only</p>
+        </div>
+        
+        <div class="shop-card" id="RupasiBangla">
+            <h2>Rupasi Bangla</h2>
+            <img class="shop-image" src="https://cdn1.goibibo.com/voy_ing/t_srp/6249dcc0a53c11ec81190a58a9feac02.jpg?im=Resize=(280,188)" alt="Rupasi Bangla">
+            <p><strong>Location:</strong> Chowmohani, Agartala, Tripura</p>
+            <p><strong>Price Range:</strong> Starting from 900/- only</p>
+        </div>
+
+        <div class="shop-card" id="HariGangaMarket">
+            <h2>Hari Ganga Market</h2>
+            <img class="shop-image" src="https://content.jdmagicbox.com/comp/haridwar/a6/9999p1334.1334.140510160224.g6a6/catalogue/hari-ganga-trading-company-haridwar-h-o-haridwar-stationery-shops-jhqky3t8lg-250.jpg" alt="Hari Ganga Market">
+            <p><strong>Location:</strong> Basak road, Tripura, Agartala</p>
+            <p><strong>Price Range:</strong> Starting from 399/- only</p>
+        </div>
+        <div class="offerzone" onclick="openWebpage('coupon.html')" id="Go to offerzone">
+            <!-- Offer Zone content -->
+        </div>
+    </div>
+</body>
+</html>

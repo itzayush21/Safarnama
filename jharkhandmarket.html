@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jharkhand Marketplace</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #d3f170;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        nav {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 10px;
+        }
+
+        .shop-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            margin: 20px;
+        }
+
+        .shop-card {
+            width: 300px;
+            border: 1px solid #ddd;
+            margin: 10px;
+            padding: 10px;
+        }
+
+        .shop-image {
+            max-width: 100%;
+            height: auto;
+        }
+
+        @media screen and (max-width: 768px) {
+            .shop-card {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Jharkhand Marketplace</h1>
+    </header>
+    <nav>
+        <a href="COUPON.php">Go to Offer Zone</a>
+    </nav>
+    <div class="shop-container">
+        <div class="shop-card" id="Firaylal">
+            <h2>Firaylal Shopping Centre</h2>
+            <img class="shop-image" src="https://im.hunt.in/cg/ranchi/City-Guide/FIRAYALAL.JPG" alt="Firaylal Shopping Centre">
+            <p><strong>Location:</strong> Albert Ekka Chowk, Ranchi</p>
+            <p><strong>Price Range:</strong> Starting from 499/- only</p>
+        </div>
+        
+        <div class="shop-card" id="BigShop">
+            <h2>Big Shop</h2>
+            <img class="shop-image" src="https://lh3.googleusercontent.com/p/AF1QipOqMdBB0UUD8cUGesBdUNCF4L6Z7_omGvctIbME=s1360-w1360-h1020" alt="Big Shop">
+            <p><strong>Location:</strong> GEL Church Complex,Ranchi</p>
+            <p><strong>Price Range:</strong> Starting from 99/- only</p>
+        </div>
+
+        <div class="shop-card" id="KashmirVastralaya">
+            <h2>Kashmir Vastralaya Collections</h2>
+            <img class="shop-image" src="https://sp-ao.shortpixel.ai/client/to_webp,q_glossy,ret_img/https://www.famousindia.in/wp-content/uploads/2021/02/Spring-City-Mall.png" alt="Kashmir Vastralaya Collections">
+            <p><strong>Location:</strong> MG Road, Ranchi</p>
+            <p><strong>Price Range:</strong> Starting from 899/- only</p>
+        </div>
+
+        <div class="shop-card" id="MSMarket">
+            <h2>MS Market</h2>
+            <img class="shop-image" src="https://sp-ao.shortpixel.ai/client/to_webp,q_glossy,ret_img/https://www.famousindia.in/wp-content/uploads/2021/02/Riyada-Bhavan-Market.png" alt="MS Market">
+            <p><strong>Location:</strong> Church Road, Lower Bazaar</p>
+            <p><strong>Price Range:</strong> Starting from 450/- only</p>
+        </div>
+        <div class="offerzone" onclick="openWebpage('coupon.html')" id="Go to offerzone">
+            <!-- Offer Zone content -->
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assam Marketplace</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        nav {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 10px;
+        }
+
+        .shop-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            margin: 20px;
+        }
+
+        .shop-card {
+            width: 300px;
+            border: 1px solid #ddd;
+            margin: 10px;
+            padding: 10px;
+        }
+
+        .shop-image {
+            max-width: 100%;
+            height: auto;
+        }
+
+        @media screen and (max-width: 768px) {
+            .shop-card {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Assam Marketplace</h1>
+    </header>
+    <nav>
+        <a href="#">Home</a>
+        <a href="maati.html">The Maati Centre</a>
+        <a href="pragjyoti.html">Pragjyoti Assam Emporium</a>
+        <a href="teaseller.html">Jalan's Tea</a>
+        <a href="cane.html">Cane Craft and Allied Industries</a>
+        <a href="japi.html">Japi</a>
+        <a href="COUPON.php">Go to Offer Zone</a>
+    </nav>
+    <div class="shop-container">
+        <div class="shop-card" id="maati">
+            <h2>The Maati Centre</h2>
+            <img class="shop-image" src="https://assets.traveltriangle.com/blog/wp-content/uploads/2018/06/The-Maati-Centre-guwahati-handicrafts-brass.jpg" alt="The Maati Centre">
+            <p><strong>Location:</strong> 10, Lamb Rd, Dighalipukhuri East, Uzan Bazar, Guwahati, Assam 781001</p>
+            <p><strong>Price Range:</strong> Products Starting from only 500/-</p>
+        </div>
+        
+        <div class="shop-card" id="pragjyoti">
+            <h2>Pragjyoti Assam Emporium</h2>
+            <img class="shop-image" src="https://assets.traveltriangle.com/blog/wp-content/uploads/2018/06/Pragjyoti-Assam-Emporium-guwahati-bamboo.jpg" alt="Pragjyoti Assam Emporium">
+            <p><strong>Location:</strong> G.N.B. Road, Ambari, Guwahati, Assam 781001</p>
+            <p><strong>Timings:</strong> 10 AM to 6 PM</p>
+            <p><strong>Price Range:</strong> Products Starting from 750/-</p>
+        </div>
+
+        <div class="shop-card" id="jalan">
+            <h2>Jalan's Tea</h2>
+            <img class="shop-image" src="https://img.traveltriangle.com/blog/wp-content/uploads/2018/06/Jalan%E2%80%99s-Tea.jpg" alt="Jalan's Tea">
+            <p><strong>Location:</strong> M.M. Road, Fancy Bazar, Opposite To Gmc Market, Guwahati, Assam 781001</p>
+            <p><strong>Timings:</strong> 9 AM to 8 PM</p>
+            <p><strong>Price Range:</strong> 400/- kg only</p>
+        </div>
+
+        <div class="shop-card" id="cane">
+            <h2>Cane Craft and Allied Industries</h2>
+            <img class="shop-image" src="https://assets.traveltriangle.com/blog/wp-content/uploads/2018/06/Cane-Craft-Allied-Industries1.jpg" alt="Cane Craft and Allied Industries">
+            <p><strong>Location:</strong> House No: 563, Guwahati-Shillong Rd, Christian Basti, Dispur, Guwahati, Assam 781005</p>
+            <p><strong>Price Range:</strong> Terracotas worth 899/-</p>
+        </div>
+
+        <div class="shop-card" id="japi">
+            <h2>Japi</h2>
+            <img class="shop-image" src="https://assets.traveltriangle.com/blog/wp-content/uploads/2018/06/JAPI-The-crafthub.jpg" alt="Japi">
+            <p><strong>Location:</strong> A. K. Azad Road, Rehabari Namghar, Near Old Post Office By-lane, Guwahati, Assam 781008</p>
+            <p><strong>Price Range:</strong> Starting from 450/-</p>
+        </div>
+    </div>
+
+    <div class="offerzone" onclick="openWebpage('coupon.html')" id="Go to offerzone">
+        <!-- Offer Zone content -->
+    </div>
+</body>
+</html>
