@@ -1,4 +1,5 @@
 # Safarnama
+Welcome to safarnama
 In SAFARNAMA, we are trying to build a web application where we 
 can promote government development projects
 of the less visited states in India and attract tourist from all over 
